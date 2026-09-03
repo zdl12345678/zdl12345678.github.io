@@ -440,8 +440,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-our-paper-detecting-deceptive-behavior-via-learning-relation-aware-visual-representations-was-accepted-by-ieee-transactions-on-information-forensics-and-security-tifs",
-          title: '🎉 Our paper Detecting Deceptive Behavior via Learning Relation-Aware Visual Representations was accepted...',
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "news-our-paper-deception-detection-meets-vision-language-models-was-accepted-by-the-international-journal-of-computer-vision-ijcv",
           title: '🎉 Our paper Deception Detection Meets Vision-Language Models was accepted by the International...',
