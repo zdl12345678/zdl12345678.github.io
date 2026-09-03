@@ -440,13 +440,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+            },},{id: "news-our-paper-cross-illumination-video-anomaly-detection-benchmark-was-accepted-to-acm-multimedia-2023",
+          title: '🎉 Our paper Cross-Illumination Video Anomaly Detection Benchmark was accepted to ACM Multimedia...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-paper-detecting-deceptive-behavior-via-learning-relation-aware-visual-representations-was-accepted-by-ieee-transactions-on-information-forensics-and-security-tifs",
+          title: '🎉 Our paper Detecting Deceptive Behavior via Learning Relation-Aware Visual Representations was accepted...',
+          description: "",
+          section: "News",},{id: "news-our-paper-deception-detection-meets-vision-language-models-was-accepted-by-the-international-journal-of-computer-vision-ijcv",
+          title: '🎉 Our paper Deception Detection Meets Vision-Language Models was accepted by the International...',
           description: "",
           section: "News",},{id: "news-two-papers-momce-mixture-of-modality-and-cue-experts-for-multimodal-deception-detection-and-decepgpt-schema-driven-deception-detection-with-multicultural-datasets-and-robust-multimodal-learning-were-accepted-to-eccv-2026",
           title: '🎉 Two papers, MoMCE: Mixture of Modality and Cue Experts for Multimodal Deception...',
