@@ -15,18 +15,6 @@ layout: default
   </header>
 
   <article>
-    <nav
-      class="nav nav-pills flex-nowrap overflow-auto mb-4 py-2 border-top border-bottom"
-      style="position: sticky; top: 60px; z-index: 10; background: var(--global-bg-color)"
-      aria-label="Homepage sections"
-    >
-      <a class="nav-link px-3 py-1" href="#about">About</a>
-      <a class="nav-link px-3 py-1" href="#news">News</a>
-      <a class="nav-link px-3 py-1" href="#publications">Publications</a>
-      <a class="nav-link px-3 py-1" href="#services">Services</a>
-      <a class="nav-link px-3 py-1" href="#honors">Awards & Honors</a>
-    </nav>
-
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
