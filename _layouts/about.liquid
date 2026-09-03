@@ -15,6 +15,18 @@ layout: default
   </header>
 
   <article>
+    <nav
+      class="nav nav-pills flex-nowrap overflow-auto mb-4 py-2 border-top border-bottom"
+      style="position: sticky; top: 60px; z-index: 10; background: var(--global-bg-color)"
+      aria-label="Homepage sections"
+    >
+      <a class="nav-link px-3 py-1" href="#about">About</a>
+      <a class="nav-link px-3 py-1" href="#news">News</a>
+      <a class="nav-link px-3 py-1" href="#publications">Publications</a>
+      <a class="nav-link px-3 py-1" href="#services">Services</a>
+      <a class="nav-link px-3 py-1" href="#honors">Awards & Honors</a>
+    </nav>
+
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
@@ -38,11 +50,11 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div id="about" class="clearfix" style="scroll-margin-top: 120px">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
+      <h2 id="news" style="scroll-margin-top: 120px">
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -58,11 +70,34 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
+      <h2 id="publications" style="scroll-margin-top: 120px">
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
+
+    <!-- Academic services -->
+    <section id="services" style="scroll-margin-top: 120px">
+      <h2>services</h2>
+      <ul>
+        <li><strong>Program Committee Member:</strong> AAAI 2026 · AAAI 2027 · ACM Multimedia</li>
+        <li>
+          <strong>Reviewer:</strong> Expert Systems with Applications (ESWA) · Pattern Recognition (PR) · IEEE Transactions on Information Forensics
+          and Security (TIFS) · International Journal of Computer Vision (IJCV)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Awards and honors -->
+    <section id="honors" style="scroll-margin-top: 120px">
+      <h2 class="border-bottom pb-1"><i class="fa-solid fa-trophy" aria-hidden="true"></i> awards and honors</h2>
+      <ul>
+        <li>Huawei Scholarship, Wuhan University, 2025</li>
+        <li>China Yangtze Power Scholarship, Wuhan University, 2024</li>
+        <li>Outstanding Graduate, Hubei University of Technology, 2021</li>
+        <li>First-Class Scholarship, Hubei University of Technology, 2020</li>
+      </ul>
+    </section>
 
     <!-- Social -->
     {% if page.social %}
