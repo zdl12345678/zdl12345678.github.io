@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dongliang Zhu - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Dongliang Zhu">
+  <meta property="og:description" content="Research Scientist at Singapore Management University.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Academicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+
+    a { color: #0645ad; text-decoration: none; }
+    a:hover { color: #0056b3; text-decoration: underline; }
+
+    /* ── Navigation ── */
+    .masthead {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .masthead__inner-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .greedy-nav {
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+    .site-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #333;
+      margin-right: 2rem;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 0.25rem;
+    }
+    .nav-links li a {
+      display: block;
+      padding: 0.4rem 0.75rem;
+      color: #555;
+      font-size: 0.85rem;
+      font-weight: 400;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .nav-links li a:hover {
+      background: #f5f5f5;
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* ── Layout ── */
+    #main {
+      display: flex;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      gap: 2rem;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      flex: 0 0 240px;
+      min-width: 0;
+    }
+    .sidebar.sticky {
+      position: sticky;
+      top: 60px;
+      align-self: flex-start;
+    }
+    .profile_box {
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .author__avatar img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #e0e0e0;
+      margin-bottom: 0.75rem;
+    }
+    .author__name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .author__bio {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .author__urls {
+      list-style: none;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    .author__urls li {
+      padding: 0.2rem 0;
+      color: #555;
+    }
+    .author__urls li a {
+      color: #555;
+    }
+    .author__urls li a:hover { color: #333; }
+    .author__urls li .note {
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .author__urls .divider {
+      border-top: 1px solid #eee;
+      margin: 0.5rem 0;
+    }
+    .author__urls li i {
+      width: 1.1rem;
+      text-align: center;
+      margin-right: 0.4rem;
+      color: #888;
+    }
+
+    /* Small icon row below links */
+    .author__urls_sm {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #eee;
+    }
+    .author__urls_sm a {
+      color: #888;
+      font-size: 1.1rem;
+      transition: color 0.15s;
+    }
+    .author__urls_sm a:hover { color: #333; }
+
+    /* ── Main content ── */
+    .page {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .page__content {
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+    .page__content p { margin-bottom: 1em; }
+    .page__content h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 1.8rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid #eee;
+      color: #222;
+    }
+    .page__content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1em 0;
+    }
+    .page__content ul li {
+      padding: 0.2rem 0;
+      padding-left: 1em;
+      position: relative;
+    }
+    .page__content ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #aaa;
+    }
+    .page__content em {
+      font-style: normal;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .pub-entry {
+      margin-bottom: 1.25rem;
+    }
+    .pub-title {
+      font-weight: 400;
+      margin-bottom: 0.1rem;
+    }
+    .pub-venue {
+      font-weight: 700;
+    }
+    .pub-authors {
+      color: #666;
+      font-size: 0.88rem;
+      margin-bottom: 0.2rem;
+    }
+    .pub-links a {
+      display: inline-block;
+      margin-right: 0.4rem;
+      padding: 0.1rem 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      color: #555;
+    }
+    .pub-links a:hover {
+      background: #f0f0f0;
+      text-decoration: none;
+    }
+    .note-eq { font-size: 0.85rem; color: #888; margin-bottom: 0.75rem; }
+
+    /* anchor offset for sticky nav */
+    .anchor {
+      display: block;
+      height: 60px;
+      margin-top: -60px;
+      visibility: hidden;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      #main { flex-direction: column; }
+      .sidebar { flex: none; width: 100%; }
+      .sidebar.sticky { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════ Navigation ════════════ -->
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <nav class="greedy-nav">
+      <span class="site-title"><a href="#about-me" style="color:inherit;text-decoration:none;">Homepage</a></span>
+      <ul class="nav-links">
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Selected Publications</a></li>
+        <li><a href="#honors">Honors &amp; Awards</a></li>
+        <li><a href="#education">Educations</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- ════════════ Main layout ════════════ -->
+<div id="main">
+
+  <!-- ── Sidebar ── -->
+  <div class="sidebar sticky">
+    <div class="profile_box">
+      <div class="author__avatar">
+        <img src="assets/img/prof_pic.jpg" alt="Dongliang Zhu">
+      </div>
+      <div class="author__content">
+        <h3 class="author__name">Dongliang Zhu</h3>
+        <p class="author__bio">Singapore Management University</p>
+      </div>
+      <div class="author__urls-wrapper">
+        <ul class="author__urls">
+          <li>
+            <div class="note">Research Scientist.</div>
+          </li>
+          <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Singapore</li>
+          <div class="divider"></div>
+          <li><a href="mailto:dlzhu@smu.edu.sg"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+          <li><a href="https://github.com/zdl12345678"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+          <li><a href="https://scholar.google.com/"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+        <div class="author__urls_sm">
+          <a href="mailto:dlzhu@smu.edu.sg" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/zdl12345678" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://scholar.google.com/" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <article class="page">
+    <div class="page__inner-wrap">
+      <section class="page__content">
+
+        <!-- About Me -->
+        <span class="anchor" id="about-me"></span>
+        <p>
+          Hello! I am Dongliang Zhu (朱栋梁) — thank you for visiting my homepage.
+          I am currently a Research Scientist at the School of Computing and Information Systems,
+          Singapore Management University (SMU), working with Prof.
+          <a href="https://shengfenghe.github.io/index">Shengfeng He</a>.
+          I received my Ph.D. degree in Computer Science from Wuhan University (WHU) in June 2026,
+          under the supervision of Prof. <a href="#">Ruimin Hu</a>.
+          From August 2025 to June 2026, I was also a visiting research intern at
+          Great Bay University (GBU), advised by Prof. <a href="#">Zitong Yu</a>.
+        </p>
+        <p>
+          My research interests include <strong>multimodal deception detection</strong>,
+          <strong>audiovisual learning</strong>, and <strong>video anomaly detection</strong>.
+          My long-term goal is to develop intelligent and interpretable perception systems
+          that can understand human behaviors.
+          <em><strong>I am always open to research discussions and potential collaborations.</strong></em>
+          If you are interested in my research topics or just want to have a chat,
+          please feel free to contact me via <a href="mailto:dlzhu@smu.edu.sg">Email</a>.
+        </p>
+        <p>
+          Prior to my doctoral studies, I received my M.S. degree from
+          Hubei University of Technology in September 2021, where I was co-advised by
+          Prof. <a href="#">Chunyan Zeng</a> and Prof. <a href="#">Zhifeng Wang</a>.
+          My master's research focused on deep learning for speech recognition.
+        </p>
+
+        <!-- News -->
+        <span class="anchor" id="news"></span>
+        <h1 id="-news">🤗 News</h1>
+        <ul>
+          <li><em>2026.06</em>: &nbsp;🎓 I successfully received my Ph.D. degree in Computer Science from Wuhan University!</li>
+          <li><em>2026.06</em>: &nbsp;🎉🎉🎉 Two papers, <em>MoMCE: Mixture of Modality and Cue Experts for Multimodal Deception Detection</em> and <em>DecepGPT: Schema-Driven Deception Detection with Multicultural Datasets and Robust Multimodal Learning</em>, were accepted to <strong>ECCV 2026</strong>!</li>
+          <li><em>2026.06</em>: &nbsp;🎉🎉🎉 Our paper <em>Deception Detection Meets Vision-Language Models</em> was accepted by the <strong>International Journal of Computer Vision (IJCV)</strong>!</li>
+          <li><em>2025.05</em>: &nbsp;🎉🎉🎉 Our paper <em>Detecting Deceptive Behavior via Learning Relation-Aware Visual Representations</em> was accepted by <strong>IEEE Transactions on Information Forensics and Security (TIFS)</strong>!</li>
+          <li><em>2023.09</em>: &nbsp;🎉🎉🎉 Our paper <em>Cross-Illumination Video Anomaly Detection Benchmark</em> was accepted to <strong>ACM Multimedia 2023</strong>!</li>
+        </ul>
+
+        <!-- Selected Publications -->
+        <span class="anchor" id="publications"></span>
+        <h1 id="-selected-publications">📖 Selected Publications</h1>
+        <p class="note-eq">* indicates equal contribution</p>
+
+        <div class="pub-entry">
+          <p class="pub-title">Deception Detection Meets Vision-Language Models. <span class="pub-venue">IJCV 2026.</span></p>
+          <p class="pub-authors"><strong>Dongliang Zhu</strong>, Ruimin Hu, Mei Wang, and others.</p>
+          <p class="pub-links"><a href="#">[Paper]</a> <a href="#">[Code]</a></p>
+        </div>
+
+        <div class="pub-entry">
+          <p class="pub-title">Detecting Deceptive Behavior via Learning Relation-Aware Visual Representations. <span class="pub-venue">IEEE TIFS 2025.</span></p>
+          <p class="pub-authors"><strong>Dongliang Zhu</strong>, Chi Zhang, Ruimin Hu, and others.</p>
+          <p class="pub-links"><a href="#">[Paper]</a> <a href="#">[Code]</a></p>
+        </div>
+
+        <div class="pub-entry">
+          <p class="pub-title">Cross-Illumination Video Anomaly Detection Benchmark. <span class="pub-venue">ACM MM 2023.</span></p>
+          <p class="pub-authors"><strong>Dongliang Zhu</strong>, Ruimin Hu, Shengli Song, and others.</p>
+          <p class="pub-links"><a href="#">[Paper]</a> <a href="#">[Code]</a></p>
+        </div>
+
+        <!-- Honors and Awards -->
+        <span class="anchor" id="honors"></span>
+        <h1 id="-honors-and-awards">🏆 Honors and Awards</h1>
+        <ul>
+          <li><em>2025</em> Huawei Scholarship, Wuhan University.</li>
+          <li><em>2024</em> China Yangtze Power Scholarship, Wuhan University.</li>
+          <li><em>2021</em> Outstanding Graduate, Hubei University of Technology.</li>
+          <li><em>2020</em> First-Class Scholarship, Hubei University of Technology.</li>
+        </ul>
+
+        <!-- Educations -->
+        <span class="anchor" id="education"></span>
+        <h1 id="-educations">🏫 Educations</h1>
+        <ul>
+          <li><em>2021.06 – 2026.06</em>, Wuhan University, Wuhan, China, Ph.D. in Computer Science, supervised by Prof. Ruimin Hu.</li>
+          <li><em>2025.08 – 2026.06</em>, Great Bay University (visiting), advised by Prof. Zitong Yu.</li>
+          <li><em>2018.09 – 2021.09</em>, Hubei University of Technology, Wuhan, China, M.S. in Computer Science, co-advised by Prof. Chunyan Zeng and Prof. Zhifeng Wang.</li>
+        </ul>
+
+        <!-- Services -->
+        <span class="anchor" id="services"></span>
+        <h1 id="-services">💬 Services</h1>
+        <ul>
+          <li>Program Committee Member: AAAI 2026, AAAI 2027, ACM Multimedia.</li>
+          <li>Reviewer: Expert Systems with Applications (ESWA), Pattern Recognition (PR), IEEE Transactions on Information Forensics and Security (TIFS), International Journal of Computer Vision (IJCV).</li>
+        </ul>
+
+      </section>
+    </div>
+  </article>
+
+</div><!-- #main -->
+
+</body>
+</html>
